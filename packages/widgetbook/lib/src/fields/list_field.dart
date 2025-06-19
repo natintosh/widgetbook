@@ -36,6 +36,7 @@ class ListField<T> extends Field<T> {
   Widget toWidget(BuildContext context, String group, T? value) {
     return DropdownMenu<T>(
       expandedInsets: EdgeInsets.zero,
+      menuHeight: MediaQuery.sizeOf(context).height - MediaQuery.viewInsetsOf(context).vertical,
       trailingIcon: const Icon(Icons.keyboard_arrow_down_rounded),
       selectedTrailingIcon: const Icon(Icons.keyboard_arrow_up_rounded),
       initialSelection: value,
