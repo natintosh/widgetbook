@@ -9,6 +9,8 @@ packages:
 command:
   version:
     branch: main
+  bootstrap:
+    usePubspecOverrides: true
 
 scripts:
   test-coverage:
