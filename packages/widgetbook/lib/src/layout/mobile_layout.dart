@@ -26,10 +26,7 @@ class MobileLayout extends StatelessWidget implements BaseLayout {
 
     return Scaffold(
       key: ValueKey(state.isNext), // Rebuild when switching to next
-      body: SafeArea(
-        top: false,
-        child: workbench,
-      ),
+      body: workbench,
       bottomNavigationBar: BottomNavigationBar(
         items: [
           const BottomNavigationBarItem(
