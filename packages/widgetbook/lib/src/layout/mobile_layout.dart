@@ -24,9 +24,7 @@ class MobileLayout extends StatelessWidget implements BaseLayout {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: workbench,
-      ),
+      body: workbench,
       bottomNavigationBar: BottomNavigationBar(
         items: [
           const BottomNavigationBarItem(
