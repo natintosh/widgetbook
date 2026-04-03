@@ -20,10 +20,6 @@ class Workbench extends StatelessWidget {
     final state = WidgetbookState.of(context);
     final useCase = state.useCase;
 
-    if (useCase == null) {
-      return state.home;
-    }
-
     final theme = WidgetbookTheme.of(context);
 
     return Scaffold(
@@ -51,7 +47,7 @@ class Workbench extends StatelessWidget {
                   newSetting,
                 );
               },
-              child: const _WorkbenchBuilder(),
+              child: useCase == null ? state.home : const _WorkbenchBuilder(),
             ),
           ),
         ),
